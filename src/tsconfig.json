@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "declaration": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": [ "es6", "dom" ],
+    "mapRoot": "./",
+    "module": "es6",
+    "moduleResolution": "node",
+    //"outDir": "../dist/out-tsc",
+    "sourceMap": true,
+    "target": "es5",
+    "typeRoots": [
+      "../node_modules/@types"
+    ],
+    "noEmit": true  // - this option tells Visual Studio weather or not to emit output (e.g. .js and .map files) upon compiling Typescript files
+                    // - we actually don't want the compiler to generate any output because Webpack will handle this
+  }
+}

@@ -1,0 +1,25 @@
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-right">
+                <span *ngIf="!isAuthenticated()">
+                    <a class="btn btn-primary"  (click)="login()">Login</a>
+                </span>
+                <span *ngIf="isAuthenticated()">
+                    {{securityService.name}} <a class="btn btn-warning"  (click)="logout()">Logout</a>
+                </span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-center">Hello from Angular 2 App with Webpack and IdentityServer3</h1>
+                <br />
+                <img src="assets/images/angular2.png">
+                <hr />
+                <a [routerLink]="['']">Home</a> | <a [routerLink]="['purchase']">Purchase</a> | <a [routerLink]="['pricing']">Pricing (protected)</a> | <a class="btn btn-primary" (click)="manualNavigation()">Manual navigation</a>
+                <hr />
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>
